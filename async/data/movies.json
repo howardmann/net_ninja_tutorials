@@ -1,0 +1,8 @@
+{
+  "movies": [
+    {"movie": "blade"},
+    {"movie": "alien"},
+    {"movie": "jaws"},
+    {"movie": "scream"}
+  ]
+}
