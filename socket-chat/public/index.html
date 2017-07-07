@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>socket.io chat app</h1>
+
+  <form id="input-form">
+    <input type="text" id="message" placeholder="Message">
+    <input type="text" id="handle" placeholder="Your name">
+    <input type="submit" id="send" value="Send">
+  </form>
+
+  <div id="output" style="border: 1px solid hotpink; padding: 10px"></div>
+  <div id="feedback" style="border: 1px solid gainsboro; padding: 10px"></div>
+
+  <!--Automatically gets served from serverside-->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/vendor/jquery.js"> </script>
+  <script src="/index.js"></script>
+</body>
+</html>
