@@ -1,9 +1,8 @@
+// Make connection - if not passing in url it will default connect to the server that served it
+var socket = io();
+// var socket = io.connect('http://localhost:3000');
 
 $(document).ready(function(){
-  // Make connection - if not passing in url it will default connect to the server that served it
-  var socket = io();
-  // var socket = io.connect('http://localhost:3000');
-
   // Cache DOM
   var $form = $('#input-form'),
       $handle = $('#handle'),
@@ -51,4 +50,14 @@ $(document).ready(function(){
       clearTimeout(timeout);
     }
   });
+
+  // Listen for new user added
+  socket.on('newUser', function(data){
+    console.log(data);
+  })
+
+  // Listen for private message and alert
+  socket.on('pm', function(data){
+    console.log(data.message);
+  })
 });
