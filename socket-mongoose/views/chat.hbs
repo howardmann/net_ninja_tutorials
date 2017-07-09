@@ -1,0 +1,15 @@
+<h1>Socket chat app</h1>
+
+<div id="output" style="border: 1px solid hotpink; padding: 5px">
+  <h2>Output</h2>
+  {{#each messages as |message|}}
+    <p>{{message.handle}}: {{message.message}}</p>
+  {{/each}}
+</div>
+  
+<form id="input-form" style="border: 1px solid chartreuse; padding 5px">
+  <h2>Enter message</h2>
+  <input type="text" id="message" placeholder="Message">
+  <input type="text" id="handle" placeholder="Your name">
+  <input type="submit" id="send" value="Send">
+</form>
